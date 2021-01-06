@@ -3,7 +3,7 @@
 getRules(){
     echo "Updating rules for $1 ..."
     curl -sSL https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/Video/$1.yaml > v2ray_rules
-    cat v2ray_rules | grep "DOMAIN" | sed -e "s/^  - DOMAIN.*,/server=\//g" -e "s/$/\/$2/g" > /etc/dnsmasq.d/$1
+    cat v2ray_rules | grep "DOMAIN" | sed -e "s/^  - DOMAIN.*,/server=\//g" -e "s/$/\/$2/g" > /etc/dnsmasq.d/$1.conf
     rm -f v2ray_rules
 }
 
