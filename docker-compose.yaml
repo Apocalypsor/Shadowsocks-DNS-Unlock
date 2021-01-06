@@ -2,7 +2,7 @@ version: '3'
 
 services:
   ss:
-    image: apocalypsor/ss-dns-unlock
+    image: apocalypsor0/ss-dns-unlock
     container_name: ss
     ports:
       - 9000:9000
