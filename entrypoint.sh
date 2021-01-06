@@ -23,4 +23,4 @@ if [ $YOUTUBE_DNS ] ; then
     getRules YouTube $YOUTUBE_DNS
 fi
 
-dnsmasq && ss-server -c /etc/shadowsocks-libev/config.json
+dnsmasq --all-servers && ss-server -c /etc/shadowsocks-libev/config.json
