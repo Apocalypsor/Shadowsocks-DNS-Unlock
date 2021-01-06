@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  ss:
+    image: apocalypsor/ss-dns-unlock
+    container_name: ss
+    ports:
+      - 9000:9000
+      - 9000:9000/udp
+    environment:
+      - NETFLIX_DNS=
+      - DISNEYPLUS_DNS=
+      - PRIMEVIDEO_DNS=
+      - YOUTUBE_DNS=
+    volumes:
+      - ./config:/etc/shadowsocks-libev
+    restart: unless-stopped
