@@ -1,5 +1,6 @@
 FROM --platform=linux/amd64 teddysun/shadowsocks-libev:latest
 
+COPY config.example.json /etc/shadowsocks-libev/config.json
 COPY entrypoint.sh /entrypoint.sh
 
 RUN apk update \
