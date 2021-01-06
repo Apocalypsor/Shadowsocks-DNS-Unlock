@@ -1,5 +1,7 @@
 FROM --platform=linux/amd64 teddysun/shadowsocks-libev:latest
 
+ARG UPSTEAM_HASH=
+
 COPY config.example.json /etc/shadowsocks-libev/config.json
 COPY entrypoint.sh /entrypoint.sh
 
