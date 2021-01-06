@@ -24,7 +24,7 @@ jobs:
       run: |
         docker pull teddysun/shadowsocks-libev:latest > /tmp/msg
         u_hash=$(cat /tmp/msg | grep Digest: | sed "s/Digest: sha256://")
-        [ $u_hash ] && sed -i "s/^ARG UPSTEAM_HASH=.*/^ARG UPSTEAM_HASH=$u_hash/g" Dockerfile
+        [ $u_hash ] && sed -i "s/^ARG UPSTEAM_HASH=.*/ARG UPSTEAM_HASH=$u_hash/g" Dockerfile
     - name: Push
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
