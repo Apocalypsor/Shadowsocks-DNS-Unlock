@@ -28,4 +28,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64,linux/386
           push: true
-          tags: ghcr.io/Apocalypsor/shadowsocks-dns-unlock:latest
+          tags: ghcr.io/apocalypsor/shadowsocks-dns-unlock:latest

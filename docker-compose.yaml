@@ -2,7 +2,7 @@ version: '3'
 
 services:
   ss:
-    image: ghcr.io/Apocalypsor/shadowsocks-dns-unlock:latest
+    image: ghcr.io/apocalypsor/shadowsocks-dns-unlock:latest
     container_name: ss
     ports:
       - 9000:9000
