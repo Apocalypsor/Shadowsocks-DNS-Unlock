@@ -1,4 +1,4 @@
-FROM teddysun/shadowsocks-libev:latest
+FROM --platform=$BUILDPLATFORM teddysun/shadowsocks-libev:latest
 
 ARG UPSTEAM_HASH=52730227d7e4a58d157115a266871e7ab53addbd32c715e78227e6163a36e71c
 
