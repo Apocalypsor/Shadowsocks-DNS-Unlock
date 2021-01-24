@@ -18,7 +18,6 @@ jobs:
       - name: Docker Login
         uses: docker/login-action@v1
         with:
-          with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.REPO_TOKEN }}
