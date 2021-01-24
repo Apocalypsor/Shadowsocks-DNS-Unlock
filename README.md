@@ -34,11 +34,14 @@ services:
     "timeout":300,
     "method":"chacha20-ietf-poly1305",
     "fast_open":true,
-    "nameserver":"127.0.0.1",  //nameserver MUST be 127.0.0.1!
+    "nameserver":"127.0.0.1",
     "mode":"tcp_and_udp",
     "plugin":"obfs-server",
     "plugin_opts":"obfs=http"
 }
 ```
 
+> Nameserver MUST be 127.0.0.1
+>
 > Referring to [teddysun/shadowsocks-libev](https://hub.docker.com/r/teddysun/shadowsocks-libev)
+
