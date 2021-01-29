@@ -7,7 +7,7 @@ COPY entrypoint.sh /entrypoint.sh
 
 RUN apk update \
     && apk --no-cache add dnsmasq curl \
-    && echo -e 'server=1.1.1.1\nserver=8.8.8.8\nconf-dir=/etc/dnsmasq.d' > /etc/dnsmasq.conf \
+    && echo -e 'server=1.1.1.1\nserver=8.8.8.8\nserver=208.67.222.222\nconf-dir=/etc/dnsmasq.d' > /etc/dnsmasq.conf \
     && chmod +x /entrypoint.sh
 
 ENV NETFLIX_DNS="" 
