@@ -1,7 +1,7 @@
 #!/bin/ash
 
 getRules(){
-    echo "Updating rules for $1 ..."
+    echo "Updating rules for $3 ..."
     curl -sSL $1 > v2ray_rules
     cat v2ray_rules | grep "DOMAIN" | sed -e "s/^  - DOMAIN.*,/server=\//g" -e "s/$/\/$2/g" > /etc/dnsmasq.d/$3.conf
     rm -f v2ray_rules
@@ -24,7 +24,7 @@ if [ $YOUTUBE_DNS ] ; then
 fi
 
 if [ $BILIBILI_DNS ] ; then
-    getRules "https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/Bilibili.list" $BILIBILI_DNS "Bilibili"
+    getRules "https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Provider/Media/Bilibili.yaml" $BILIBILI_DNS "Bilibili"
 fi
 
 dnsmasq --all-servers && ss-server -c /etc/shadowsocks-libev/config.json
