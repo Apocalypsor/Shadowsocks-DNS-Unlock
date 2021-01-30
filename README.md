@@ -19,6 +19,7 @@ services:
       - DISNEYPLUS_DNS=
       - PRIMEVIDEO_DNS=
       - YOUTUBE_DNS=
+      - BILIBILI_DNS=
     volumes:
       - ./config:/etc/shadowsocks-libev
     restart: unless-stopped
