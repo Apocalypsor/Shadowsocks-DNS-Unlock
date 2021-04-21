@@ -1,6 +1,6 @@
 FROM --platform=$BUILDPLATFORM teddysun/shadowsocks-libev:latest
 
-ARG UPSTEAM_HASH=4278c2e4aec65e732e3ebf5ad9f24b807a0e8d48579065c3cac6dc8bf415ee1d
+ARG UPSTEAM_HASH=bc1369a38d75cab5f21663e2b46f46d974f3ebef65e21ed31f53b213c5336bd0
 
 COPY config.example.json /etc/shadowsocks-libev/config.json
 COPY entrypoint.sh /entrypoint.sh
