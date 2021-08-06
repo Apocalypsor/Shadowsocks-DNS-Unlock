@@ -1,0 +1,11 @@
+{
+	"dockerfiles": {
+		"Dockerfile": [
+			{
+				"name": "teddysun/shadowsocks-libev",
+				"tag": "latest",
+				"digest": "1c20e0b8efe4068816881dab6b7d28647672e98d60a80e5e0d5dee62a92ebade"
+			}
+		]
+	}
+}
